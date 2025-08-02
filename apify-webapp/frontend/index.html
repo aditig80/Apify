@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apify Web App Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Apify Actor Runner</h1>
+        <p>Enter your Apify API Token to begin.</p>
+
+        <div class="card">
+            <h2>Step 1: Authenticate</h2>
+            <div class="input-group">
+                <input type="password" id="apiToken" placeholder="Your Apify API Token">
+                <button id="getActorsBtn">Get My Actors</button>
+            </div>
+        </div>
+
+        <div class="card" id="actorSelection" style="display: none;">
+            <h2>Step 2: Choose Actor & Provide Input</h2>
+            <select id="actorsDropdown">
+                <option value="">-- Select an Actor --</option>
+            </select>
+            <div id="inputSchemaForm">
+                </div>
+            <button id="runActorBtn" style="display: none;">Run Actor</button>
+        </div>
+
+        <div class="card" id="resultsSection" style="display: none;">
+            <h2>Step 3: Results</h2>
+            <div id="loader" style="display: none;">Running actor... please wait.</div>
+            <pre id="resultsOutput"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
