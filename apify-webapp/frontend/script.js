@@ -24,7 +24,7 @@ async function fetchActors() {
   loader.style.display = 'block';
 
   try {
-    const res = await axios.post('https://apify-backend-4m3u.onrender.com', { apiKey });
+    const res = await axios.post('https://apify-backend-4m3u.onrender.com/actors', { apiKey });
     const select = document.getElementById('actorSelect');
     select.innerHTML = '<option value="">-- Choose Actor --</option>';
 
@@ -57,7 +57,7 @@ async function loadSchema() {
   loader.style.display = 'block';
 
   try {
-    const res = await axios.post('https://apify-backend-4m3u.onrender.com', {
+    const res = await axios.post('https://apify-backend-4m3u.onrender.com/schema', {
       apiKey,
       actorId: selectedActorId,
     });
@@ -115,7 +115,7 @@ async function runActor() {
   loader.style.display = 'block';
 
   try {
-    const res = await axios.post('https://apify-backend-4m3u.onrender.com', {
+    const res = await axios.post('https://apify-backend-4m3u.onrender.com/run-actors', {
       apiKey,
       actorId: selectedActorId,
       input: inputData,
@@ -138,5 +138,6 @@ async function runActor() {
     loader.style.display = 'none';
   }
 }
+
 
 
