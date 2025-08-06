@@ -115,7 +115,7 @@ async function runActor() {
   loader.style.display = 'block';
 
   try {
-    const res = await axios.post('https://apify-backend-4m3u.onrender.com/run-actors', {
+    const res = await axios.post('https://apify-backend-4m3u.onrender.com/run-actor', {
       apiKey,
       actorId: selectedActorId,
       input: inputData,
@@ -138,6 +138,7 @@ async function runActor() {
     loader.style.display = 'none';
   }
 }
+
 
 
 
